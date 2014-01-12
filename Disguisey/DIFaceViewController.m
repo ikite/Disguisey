@@ -31,6 +31,11 @@
 }
 
 - (IBAction)pickFace:(id)sender {
+    
+    for (UIView *subview in self.faceImage.subviews) {
+        [subview removeFromSuperview];
+    }
+    
     // create picker and configure it
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -94,9 +99,7 @@
     
     // resize image to fit
     faceImage = [self resizeFaceImage:faceImage];
-    
     self.faceImage.image = faceImage;
-    
     [self releasePicker:picker];
 }
 

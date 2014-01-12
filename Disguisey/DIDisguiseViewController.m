@@ -29,6 +29,7 @@
 }
 
 - (IBAction)disguiseElementChosen:(id)sender {
+    self.disguise.lastChosenImage = ((UIButton*)sender).currentImage;
     self.tabBarController.selectedIndex = 0;
 }
 

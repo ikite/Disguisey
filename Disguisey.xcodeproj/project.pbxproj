@@ -22,6 +22,9 @@
 		C83476061880C5F4009D9EFE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83475E51880C5F4009D9EFE /* UIKit.framework */; };
 		C834760E1880C5F4009D9EFE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C834760C1880C5F4009D9EFE /* InfoPlist.strings */; };
 		C83476101880C5F4009D9EFE /* DisguiseyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C834760F1880C5F4009D9EFE /* DisguiseyTests.m */; };
+		C834761B18811A0C009D9EFE /* DIDisguiseElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C834761A18811A0C009D9EFE /* DIDisguiseElement.m */; };
+		C834761E18811C4E009D9EFE /* DIDisguise.m in Sources */ = {isa = PBXBuildFile; fileRef = C834761D18811C4E009D9EFE /* DIDisguise.m */; };
+		C834762118812ADF009D9EFE /* DIFaceImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C834762018812ADF009D9EFE /* DIFaceImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,12 @@
 		C834760B1880C5F4009D9EFE /* DisguiseyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DisguiseyTests-Info.plist"; sourceTree = "<group>"; };
 		C834760D1880C5F4009D9EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C834760F1880C5F4009D9EFE /* DisguiseyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisguiseyTests.m; sourceTree = "<group>"; };
+		C834761918811A0C009D9EFE /* DIDisguiseElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDisguiseElement.h; sourceTree = "<group>"; };
+		C834761A18811A0C009D9EFE /* DIDisguiseElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDisguiseElement.m; sourceTree = "<group>"; };
+		C834761C18811C4E009D9EFE /* DIDisguise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDisguise.h; sourceTree = "<group>"; };
+		C834761D18811C4E009D9EFE /* DIDisguise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDisguise.m; sourceTree = "<group>"; };
+		C834761F18812ADF009D9EFE /* DIFaceImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIFaceImageView.h; sourceTree = "<group>"; };
+		C834762018812ADF009D9EFE /* DIFaceImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIFaceImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +133,12 @@
 				C83475FA1880C5F4009D9EFE /* DIDisguiseViewController.m */,
 				C83475FC1880C5F4009D9EFE /* Images.xcassets */,
 				C83475E81880C5F4009D9EFE /* Supporting Files */,
+				C834761918811A0C009D9EFE /* DIDisguiseElement.h */,
+				C834761A18811A0C009D9EFE /* DIDisguiseElement.m */,
+				C834761C18811C4E009D9EFE /* DIDisguise.h */,
+				C834761D18811C4E009D9EFE /* DIDisguise.m */,
+				C834761F18812ADF009D9EFE /* DIFaceImageView.h */,
+				C834762018812ADF009D9EFE /* DIFaceImageView.m */,
 			);
 			path = Disguisey;
 			sourceTree = "<group>";
@@ -205,6 +220,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = iKite;
 				TargetAttributes = {
+					C83475DD1880C5F4009D9EFE = {
+						DevelopmentTeam = P3A55AKKVS;
+					};
 					C83476011880C5F4009D9EFE = {
 						TestTargetID = C83475DD1880C5F4009D9EFE;
 					};
@@ -256,8 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83475F81880C5F4009D9EFE /* DIFaceViewController.m in Sources */,
+				C834761B18811A0C009D9EFE /* DIDisguiseElement.m in Sources */,
 				C83475EE1880C5F4009D9EFE /* main.m in Sources */,
+				C834761E18811C4E009D9EFE /* DIDisguise.m in Sources */,
 				C83475F21880C5F4009D9EFE /* DIAppDelegate.m in Sources */,
+				C834762118812ADF009D9EFE /* DIFaceImageView.m in Sources */,
 				C83475FB1880C5F4009D9EFE /* DIDisguiseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,10 +406,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Disguisey/Disguisey-Prefix.pch";
 				INFOPLIST_FILE = "Disguisey/Disguisey-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -398,10 +422,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Disguisey/Disguisey-Prefix.pch";
 				INFOPLIST_FILE = "Disguisey/Disguisey-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -467,6 +494,7 @@
 				C83476151880C5F4009D9EFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C83476161880C5F4009D9EFE /* Build configuration list for PBXNativeTarget "DisguiseyTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +503,7 @@
 				C83476181880C5F4009D9EFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DIDisguise.h"
 
 @interface DIAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) DIDisguise *disguise;
 
 @end

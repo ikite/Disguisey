@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DIDisguise.h"
+#import "DIAppDelegate.h"
 
 @interface DIDisguiseViewController : UIViewController
+
+- (IBAction)disguiseElementChosen:(id)sender;
+
+@property (strong, nonatomic)DIDisguise *disguise;
 
 @end

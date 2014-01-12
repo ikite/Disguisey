@@ -10,6 +10,15 @@
 
 @implementation DIAppDelegate
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.disguise = [[DIDisguise alloc] init];
+    }
+    return self;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
